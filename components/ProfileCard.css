@@ -1,0 +1,219 @@
+:root {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  --pointer-from-center: 0;
+  --pointer-from-top: 0.5;
+  --pointer-from-left: 0.5;
+  --card-opacity: 0;
+  --rotate-x: 0deg;
+  --rotate-y: 0deg;
+  --background-x: 50%;
+  --background-y: 50%;
+  --grain: none;
+  --icon: none;
+  --behind-gradient: none;
+  --behind-glow-color: rgba(255, 255, 255, 0.12);
+  --behind-glow-size: 55%;
+  --inner-gradient: #152527;
+  --sunpillar-1: hsl(210, 100%, 73%);
+  --sunpillar-2: hsl(195, 100%, 69%);
+  --sunpillar-3: hsl(220, 100%, 69%);
+  --sunpillar-4: hsl(240, 100%, 76%);
+  --sunpillar-5: hsl(200, 100%, 74%);
+}
+
+.pc-card-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  height: 460px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.pc-behind {
+  position: absolute;
+  inset: -10px;
+  border-radius: 28px;
+  background: radial-gradient(circle at var(--pointer-x) var(--pointer-y), var(--behind-glow-color), transparent var(--behind-glow-size));
+  filter: blur(25px);
+  opacity: 0.7;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.pc-card-shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+
+.pc-card-shell.entering {
+  transition: transform 0.3s ease-out;
+}
+
+.pc-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  background: var(--inner-gradient);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  transform: rotateX(var(--rotate-y)) rotateY(var(--rotate-x));
+  transform-style: preserve-3d;
+}
+
+.pc-inside {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+.pc-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: radial-gradient(
+    circle at var(--pointer-x) var(--pointer-y),
+    rgba(255, 255, 255, 0.25) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 2;
+  mix-blend-mode: overlay;
+}
+
+.pc-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    transparent 50%,
+    rgba(255, 255, 255, 0.05)
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+
+.pc-content {
+  position: relative;
+  z-index: 4;
+}
+
+.pc-avatar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.avatar {
+  width: 220px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.pc-user-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  background: #152527;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 0.7rem 1rem;
+}
+
+.pc-user-details {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.pc-mini-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+
+.pc-mini-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pc-user-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-handle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.pc-status {
+  font-size: 0.7rem;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.pc-contact-btn {
+  padding: 0.45rem 0.95rem;
+  background: #152527;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    transform: scale(1.05);
+    background: #1e3538;
+    border-color: rgba(255, 255, 255, 0.45);
+  }
+}
+
+.pc-details {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.pc-details h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ecf6f2;
+  margin: 0 0 0.15rem;
+  font-family: var(--font-display), sans-serif;
+}
+
+.pc-details p {
+  font-size: 0.85rem;
+  color: #a8c8be;
+  margin: 0;
+}
