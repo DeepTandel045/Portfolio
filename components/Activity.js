@@ -17,6 +17,10 @@ const Section = styled.section`
   max-width: 1240px;
   margin: 0 auto;
   animation: ${fadeUp} 0.7s ease both;
+
+  @media (max-width: 600px) {
+    padding: 4rem 1.25rem;
+  }
 `;
 
 const SectionTag = styled.span`
@@ -51,6 +55,10 @@ const Subtitle = styled.p`
   font-size: 1.1rem;
   margin-bottom: 3.5rem;
   max-width: 650px;
+
+  @media (max-width: 600px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 const Grid = styled.div`
@@ -71,6 +79,11 @@ const Card = styled.div`
 
   &:hover {
     border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (max-width: 600px) {
+    padding: 1.5rem 1.1rem;
+    border-radius: 16px;
   }
 `;
 

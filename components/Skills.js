@@ -8,6 +8,10 @@ const Wrapper = styled.section`
   background: rgba(18, 12, 38, 0.45);
   border-top: 1px solid rgba(255, 159, 252, 0.18);
   border-bottom: 1px solid rgba(255, 159, 252, 0.18);
+
+  @media (max-width: 600px) {
+    padding: 4rem 1.25rem;
+  }
 `;
 
 const Inner = styled.div`
@@ -43,6 +47,11 @@ const TabRow = styled.div`
   gap: 0.75rem;
   margin-bottom: 2.5rem;
   flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    gap: 0.5rem;
+    margin-bottom: 1.8rem;
+  }
 `;
 
 const TabBtn = styled.button`
@@ -61,6 +70,11 @@ const TabBtn = styled.button`
     background: #1e3538;
     color: #ffffff;
   }
+
+  @media (max-width: 600px) {
+    padding: 0.45rem 1rem;
+    font-size: 0.8rem;
+  }
 `;
 
 const Grid = styled.div`
@@ -68,6 +82,11 @@ const Grid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 1.25rem;
   max-width: 800px;
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap: 0.85rem;
+  }
 `;
 
 const popIn = keyframes`
@@ -92,6 +111,12 @@ const SkillIconBox = styled.div`
     transform: translateY(-4px);
     border-color: var(--accent);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+  }
+
+  @media (max-width: 480px) {
+    width: 62px;
+    height: 62px;
+    border-radius: 12px;
   }
 `;
 

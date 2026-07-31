@@ -25,8 +25,8 @@
 .pc-card-wrapper {
   position: relative;
   width: 100%;
-  max-width: 340px;
-  height: 460px;
+  max-width: min(340px, 92vw);
+  height: clamp(420px, 58vh, 460px);
   margin: 0 auto;
   perspective: 1000px;
 }

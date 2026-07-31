@@ -8,6 +8,10 @@ const Section = styled.section`
   padding: 6rem 2rem;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 600px) {
+    padding: 4rem 1.25rem;
+  }
 `;
 
 const Inner = styled.div`
@@ -45,6 +49,10 @@ const Subtitle = styled.p`
   font-size: 1.05rem;
   margin-bottom: 3rem;
   max-width: 500px;
+
+  @media (max-width: 600px) {
+    margin-bottom: 2rem;
+  }
 `;
 
 const Grid = styled.div`
@@ -79,6 +87,10 @@ const InfoItem = styled.a`
     border-color: rgba(255, 255, 255, 0.4);
     background: #1e3538;
     transform: translateX(4px);
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem 1.1rem;
   }
 `;
 
@@ -147,6 +159,11 @@ const Form = styled.form`
   padding: 2.5rem;
   backdrop-filter: blur(14px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+
+  @media (max-width: 600px) {
+    padding: 1.5rem 1.1rem;
+    border-radius: 16px;
+  }
 `;
 
 const FormRow = styled.div`
@@ -349,7 +366,7 @@ export default function Contact() {
               <SocialBtn href="https://github.com/DeepTandel045" target="_blank" rel="noopener noreferrer" title="GitHub">
                 GH
               </SocialBtn>
-              <SocialBtn href="https://www.linkedin.com/in/deep-tandel" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <SocialBtn href="https://www.linkedin.com/in/deep-tandel-63079a320/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                 IN
               </SocialBtn>
               <SocialBtn href="mailto:tandeldeep6106@gmail.com" title="Email">

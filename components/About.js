@@ -5,6 +5,10 @@ import ProfileCard from './ProfileCard';
 
 const Section = styled.section`
   padding: 6rem 2rem;
+
+  @media (max-width: 600px) {
+    padding: 4rem 1.25rem;
+  }
 `;
 
 const Inner = styled.div`
@@ -32,6 +36,10 @@ const SectionTitle = styled.h2`
     background: linear-gradient(90deg, #FF9FFC, #B497CF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 2rem;
   }
 `;
 
@@ -141,6 +149,11 @@ const Stats = styled.div`
   gap: 2rem;
   flex-wrap: wrap;
   margin-top: 2rem;
+
+  @media (max-width: 480px) {
+    justify-content: space-between;
+    gap: 1rem;
+  }
 `;
 
 const StatItem = styled.div`
@@ -162,6 +175,7 @@ const StatItem = styled.div`
 const ResumeBtn = styled.a`
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   margin-top: 2rem;
   padding: 0.75rem 1.8rem;
@@ -178,6 +192,10 @@ const ResumeBtn = styled.a`
     transform: translateY(-2px);
     background: #1e3538;
     border-color: rgba(255, 255, 255, 0.45);
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
   }
 `;
 

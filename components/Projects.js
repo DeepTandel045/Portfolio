@@ -58,6 +58,10 @@ const loopProjects = [...projects, ...projects];
 
 const Section = styled.section`
   padding: 6rem 2rem;
+
+  @media (max-width: 600px) {
+    padding: 4rem 1.25rem;
+  }
 `;
 
 const Inner = styled.div`
@@ -85,6 +89,10 @@ const SectionTitle = styled.h2`
     background: linear-gradient(90deg, var(--accent), var(--accent-2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 1.8rem;
   }
 `;
 
@@ -138,7 +146,7 @@ const Card = styled.div`
   }
 
   @media (max-width: 768px) {
-    flex-basis: 82vw;
+    flex-basis: min(320px, 85vw);
   }
 `;
 
@@ -152,6 +160,10 @@ const CardBanner = styled.img`
 const CardBody = styled.div`
   padding: 1.5rem;
   transform: translateZ(20px);
+
+  @media (max-width: 480px) {
+    padding: 1.2rem;
+  }
 `;
 
 const ProjectTitle = styled.h3`
@@ -226,7 +238,7 @@ const ModalOverlay = styled.div`
   z-index: 2000;
   display: grid;
   place-items: center;
-  padding: 1.5rem;
+  padding: 1rem;
 `;
 
 const ModalContent = styled.div`
@@ -246,6 +258,11 @@ const ModalContent = styled.div`
   &::-webkit-scrollbar-thumb {
     background: var(--accent);
     border-radius: 4px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 1.5rem 1.2rem;
+    border-radius: 18px;
   }
 `;
 

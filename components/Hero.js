@@ -32,6 +32,10 @@ const Section = styled.section`
   position: relative;
   overflow: hidden;
   padding: 8.5rem 2rem 3rem;
+
+  @media (max-width: 600px) {
+    padding: 6rem 1.25rem 3rem;
+  }
 `;
 
 const BgGlow = styled.div`
@@ -62,6 +66,7 @@ const Content = styled.div`
   max-width: 900px;
   text-align: center;
   z-index: 1;
+  width: 100%;
 `;
 
 const Greet = styled.p`
@@ -75,7 +80,7 @@ const Greet = styled.p`
 `;
 
 const Name = styled.h1`
-  font-size: clamp(2.6rem, 8vw, 5.4rem);
+  font-size: clamp(1.9rem, 7.5vw, 5.4rem);
   font-weight: 900;
   color: #f8fafc;
   margin: 0.55rem 0;
@@ -83,6 +88,7 @@ const Name = styled.h1`
   animation-delay: 0.25s;
   line-height: 1.1;
   font-family: var(--font-display), sans-serif;
+  word-break: break-word;
 `;
 
 const GradientText = styled.span`
@@ -94,10 +100,10 @@ const GradientText = styled.span`
 
 const Tagline = styled.p`
   color: #cbd5e1;
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-size: clamp(0.95rem, 2.5vw, 1.3rem);
   margin: 1.5rem auto;
   max-width: 680px;
-  line-height: 1.8;
+  line-height: 1.7;
   animation: ${fadeUp} 0.6s ease both;
   animation-delay: 0.5s;
 `;
@@ -109,6 +115,11 @@ const BtnGroup = styled.div`
   flex-wrap: wrap;
   animation: ${fadeUp} 0.6s ease both;
   animation-delay: 0.65s;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const PrimaryBtn = styled.a`
@@ -129,6 +140,11 @@ const PrimaryBtn = styled.a`
     border-color: rgba(255, 255, 255, 0.45);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const OutlineBtn = styled.a`
@@ -146,6 +162,11 @@ const OutlineBtn = styled.a`
     background: #152527;
     border-color: rgba(255, 255, 255, 0.45);
     transform: translateY(-3px);
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    text-align: center;
   }
 `;
 
