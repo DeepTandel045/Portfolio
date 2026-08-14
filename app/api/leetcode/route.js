@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const username = 'Tandel_Deep_1906';
+  const username = 'Tandel_Deep_45';
 
   // 1. Try Official LeetCode GraphQL API
   try {

@@ -375,8 +375,8 @@ export default function Activity() {
               </PlatformIcon>
               <PlatformInfo>
                 <PlatformName>LeetCode</PlatformName>
-                <PlatformHandle href="https://leetcode.com/u/Tandel_Deep_1906/" target="_blank" rel="noopener noreferrer">
-                  @Tandel_Deep_1906
+                <PlatformHandle href="https://leetcode.com/u/Tandel_Deep_45/" target="_blank" rel="noopener noreferrer">
+                  @Tandel_Deep_45
                 </PlatformHandle>
               </PlatformInfo>
             </CardHeader>
