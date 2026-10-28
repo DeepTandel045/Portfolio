@@ -212,7 +212,7 @@ export default function About() {
             <ProfileCard
               avatarUrl="/profile.jpg"
               name="Deep Tandel"
-              title="Frontend Developer & Software Engineer"
+              title="IT Undergraduate & Full-Stack Developer"
               handle="DeepTandel045"
               status="Available for Hire"
               showUserInfo={true}
@@ -223,36 +223,33 @@ export default function About() {
           </ImageWrapper>
           <TextBlock>
             <Bio>
-              I am a developer focused on clean architecture and practical UX. I enjoy translating
-              product ideas into responsive, maintainable web applications with a strong attention
-              to detail.
+              Information Technology undergraduate at CHARUSAT with hands-on experience in C++, Python, full-stack web development, databases, REST APIs, and AI-powered applications.
             </Bio>
             <Bio>
-              My workflow combines modern frontend tooling with backend fundamentals, so I can ship
-              complete products from interface to API.
+              Developer of <strong>FoodLens</strong>, a full-stack food intelligence platform integrating barcode-based product identification, OCR label extraction, external APIs, and AI explanations. Strong foundation in Data Structures &amp; Algorithms, DBMS, OOP, and problem solving.
             </Bio>
             <InfoGrid>
               <InfoCard>
                 <h4>Education</h4>
-                <p>B.Tech in Computer Science with focus on software engineering and DBMS.</p>
+                <p>B.Tech in IT at CHARUSAT, Gujarat (2024 – 2028 Expected, CGPA: 7.78).</p>
               </InfoCard>
               <InfoCard>
-                <h4>Experience</h4>
-                <p>Freelance and project-based work delivering portfolio, dashboard, and API apps.</p>
+                <h4>Core Focus</h4>
+                <p>Full-Stack Web Dev (FastAPI/React), AI &amp; Vision (OCR, OpenCV), DBMS &amp; DSA.</p>
               </InfoCard>
             </InfoGrid>
             <Stats>
               <StatItem>
-                <h3>12+</h3>
-                <p>Projects Built</p>
+                <h3>180+</h3>
+                <p>DSA Problems Solved</p>
               </StatItem>
               <StatItem>
-                <h3>3+</h3>
-                <p>Years Coding</p>
+                <h3>7.78</h3>
+                <p>CGPA (CHARUSAT)</p>
               </StatItem>
               <StatItem>
-                <h3>8+</h3>
-                <p>Core Stacks</p>
+                <h3>2+</h3>
+                <p>Featured Projects</p>
               </StatItem>
             </Stats>
             <ResumeBtn href="/resume.pdf" download="Deep_Tandel_Resume.pdf" rel="noopener noreferrer">

@@ -133,40 +133,46 @@ const SkillIcon = styled.img`
 `;
 
 const skills = [
+  // Languages
+  { title: 'C', icon: 'https://cdn.simpleicons.org/c/A8B9CC', category: 'languages' },
+  { title: 'C++', icon: 'https://cdn.simpleicons.org/cplusplus/00599C', category: 'languages' },
+  { title: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB', category: 'languages' },
+  { title: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E', category: 'languages' },
+
+  // Backend & APIs
+  { title: 'FastAPI', icon: 'https://cdn.simpleicons.org/fastapi/009688', category: 'backend' },
+  { title: 'REST APIs', icon: 'https://cdn.simpleicons.org/openapiinitiative/6BA539', category: 'backend' },
+  { title: 'Open Food Facts', icon: 'https://cdn.simpleicons.org/fastapi/009688', category: 'backend' },
+
   // Frontend
+  { title: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB', category: 'frontend' },
   { title: 'HTML5', icon: 'https://cdn.simpleicons.org/html5/E34F26', category: 'frontend' },
   { title: 'CSS3', icon: 'https://cdn.simpleicons.org/css/1572B6', category: 'frontend' },
-  { title: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E', category: 'frontend' },
-  { title: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB', category: 'frontend' },
-  { title: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/FFFFFF', category: 'frontend' },
-  { title: 'Styled Components', icon: 'https://cdn.simpleicons.org/styledcomponents/DB7093', category: 'frontend' },
-  
-  // Backend
-  { title: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/5FA04E', category: 'backend' },
-  { title: 'Express', icon: 'https://cdn.simpleicons.org/express/FFFFFF', category: 'backend' },
-  { title: 'REST APIs', icon: 'https://cdn.simpleicons.org/openapiinitiative/6BA539', category: 'backend' },
-  { title: 'JWT Auth', icon: 'https://cdn.simpleicons.org/jsonwebtokens/FFFFFF', category: 'backend' },
-  { title: 'Firebase', icon: 'https://cdn.simpleicons.org/firebase/FFCA28', category: 'backend' },
-  
+
   // Databases
-  { title: 'MongoDB', icon: 'https://cdn.simpleicons.org/mongodb/47A248', category: 'database' },
   { title: 'MySQL', icon: 'https://cdn.simpleicons.org/mysql/4479A1', category: 'database' },
-  
-  // Tools & DevOps
+  { title: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1', category: 'database' },
+  { title: 'SQLite', icon: 'https://cdn.simpleicons.org/sqlite/003B57', category: 'database' },
+
+  // AI & Computer Vision
+  { title: 'OCR / Tesseract', icon: 'https://cdn.simpleicons.org/opencv/5C3EE8', category: 'ai' },
+  { title: 'OpenCV', icon: 'https://cdn.simpleicons.org/opencv/5C3EE8', category: 'ai' },
+  { title: 'LLM APIs', icon: 'https://cdn.simpleicons.org/openai/412991', category: 'ai' },
+
+  // Tools & Concepts
   { title: 'Git', icon: 'https://cdn.simpleicons.org/git/F05032', category: 'tools' },
   { title: 'GitHub', icon: 'https://cdn.simpleicons.org/github/FFFFFF', category: 'tools' },
-  { title: 'Vercel', icon: 'https://cdn.simpleicons.org/vercel/FFFFFF', category: 'tools' },
   { title: 'VS Code', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg', category: 'tools' },
-  { title: 'Postman', icon: 'https://cdn.simpleicons.org/postman/FF6C37', category: 'tools' },
-  { title: 'Figma', icon: 'https://cdn.simpleicons.org/figma/F24E1E', category: 'tools' },
 ];
 
 const categories = [
   { id: 'all', label: 'All Stack' },
+  { id: 'languages', label: 'Languages' },
+  { id: 'backend', label: 'Backend & APIs' },
   { id: 'frontend', label: 'Frontend' },
-  { id: 'backend', label: 'Backend' },
   { id: 'database', label: 'Databases' },
-  { id: 'tools', label: 'Tools & DevOps' },
+  { id: 'ai', label: 'AI & Computer Vision' },
+  { id: 'tools', label: 'Tools' },
 ];
 
 export default function Skills() {

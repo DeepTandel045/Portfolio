@@ -204,11 +204,11 @@ export default function Hero() {
         <Greet>Available for new opportunities</Greet>
         <Name>
           Deep Tandel
-          <GradientText>Frontend Developer &amp; Software Engineer</GradientText>
+          <GradientText>IT Undergraduate &amp; Full-Stack Web Developer</GradientText>
         </Name>
         <Tagline>
           <BlurText
-            text="I build responsive interfaces and full-stack products that feel fast, accessible, and intentional. Focused on React, Next.js, and backend APIs for production-ready apps."
+            text="Information Technology undergraduate at CHARUSAT with hands-on experience in C++, Python, full-stack web development, databases, REST APIs, and AI-powered applications like FoodLens."
             delay={100}
             animateBy="words"
             direction="top"

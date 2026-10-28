@@ -115,6 +115,16 @@ const ItemOrg = styled.p`
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    &:hover {
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+  }
 `;
 
 const ItemDesc = styled.p`
@@ -123,45 +133,68 @@ const ItemDesc = styled.p`
   line-height: 1.7;
 `;
 
+const CertiBadge = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+  color: #FF9FFC;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid rgba(255, 159, 252, 0.3);
+  background: rgba(255, 159, 252, 0.1);
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 159, 252, 0.22);
+    border-color: #FF9FFC;
+    transform: translateY(-1px);
+  }
+`;
+
 const experiences = [
   {
-    period: '2024 – Present',
-    title: 'Full Stack Developer (Freelance)',
-    org: 'Self-employed',
-    desc: 'Building responsive web applications for clients, ranging from RESTful APIs to modern frontend user interfaces. Developing with Next.js, Node.js, and styled components.',
+    period: 'Ongoing',
+    title: '180+ Coding Problems Solved',
+    org: 'LeetCode (160+), GeeksforGeeks & HackerRank',
+    desc: 'Solved 180+ algorithmic problems across platforms demonstrating strong proficiency in Data Structures & Algorithms, Problem Solving, C++, and Python.',
   },
   {
-    period: '2023 – 2024',
-    title: 'Web Development Intern',
-    org: 'Tech Startup Ecosystem',
-    desc: 'Contributed to frontend feature development using React and facilitated backend REST API integrations. Optimized layout structures and assets, improving initial page load speeds by 30%.',
+    period: '2025',
+    title: 'Data Structure and Algorithms using Java',
+    org: 'NPTEL Online Certification, IIT Kharagpur',
+    link: 'https://nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS148S951400112',
+    desc: 'Roll No: NPTEL25CS148S951400112. Comprehensive certification covering algorithm design, asymptotic evaluation, and core data structure implementations.',
   },
   {
-    period: '2022 – 2023',
-    title: 'Junior Developer',
-    org: 'Project Engineering Team',
-    desc: 'Participated in full-stack architecture design for collegiate database management projects. Collaborated in a 4-person team to implement secure user sessions and query optimizations.',
+    period: 'Certification',
+    title: 'Foundations of Data Structures and Algorithm Analysis',
+    org: 'Coursera',
+    desc: 'Completed specialized coursework focusing on linear & non-linear data structures, graph algorithms, trees, sorting techniques, and complexity analysis.',
   },
 ];
 
 const education = [
   {
-    period: '2022 – 2026',
-    title: 'B.Tech in Computer Science & Engineering',
-    org: 'Technical University',
-    desc: 'Studying core software engineering, data structures, algorithms, Database Management Systems (DBMS), and operating systems. CGPA: 8.5/10.',
+    period: '2024 – 2028 (Expected)',
+    title: 'B.Tech in Information Technology',
+    org: 'CHARUSAT, Gujarat',
+    desc: 'Undergraduate degree focusing on Data Structures & Algorithms, Database Management Systems (DBMS), OOP, Web Technologies, and REST APIs. CGPA: 7.78.',
   },
   {
-    period: '2020 – 2022',
-    title: 'Higher Secondary Education (Science)',
-    org: 'State Science College',
-    desc: 'Completed secondary education with an academic focus on Mathematics, Physics, and Chemistry. Scored 90% aggregate.',
+    period: '2024',
+    title: 'Higher Secondary Certificate (Class XII)',
+    org: 'Gujarat State Board',
+    desc: 'Completed higher secondary education with a strong scientific and mathematical foundation. Percentage: 86.15%.',
   },
   {
-    period: '2019 – 2020',
-    title: 'Secondary School Certification',
-    org: 'High School Board Academy',
-    desc: 'Graduated with 95% aggregate scoring. Actively engaged in science olympiads, coding clubs, and local technology seminars.',
+    period: '2022',
+    title: 'Secondary School Certificate (Class X)',
+    org: 'Gujarat State Board',
+    desc: 'Completed secondary school certificate with academic distinction. Percentage: 89.15%.',
   },
 ];
 
@@ -171,13 +204,13 @@ export default function Experience() {
       <Inner>
         <SectionLabel>My journey</SectionLabel>
         <SectionTitle>
-          Experience &amp; <span>Education</span>
+          Education &amp; <span>Achievements</span>
         </SectionTitle>
         <TwoCol>
           <div>
-            <ColTitle>💼 Work Experience</ColTitle>
+            <ColTitle>🎓 Education</ColTitle>
             <Timeline>
-              {experiences.map((e) => (
+              {education.map((e) => (
                 <TimelineItem key={e.title}>
                   <ItemPeriod>{e.period}</ItemPeriod>
                   <ItemTitle>{e.title}</ItemTitle>
@@ -188,14 +221,27 @@ export default function Experience() {
             </Timeline>
           </div>
           <div>
-            <ColTitle>🎓 Education</ColTitle>
+            <ColTitle>🏆 Achievements &amp; Certifications</ColTitle>
             <Timeline>
-              {education.map((e) => (
+              {experiences.map((e) => (
                 <TimelineItem key={e.title}>
                   <ItemPeriod>{e.period}</ItemPeriod>
                   <ItemTitle>{e.title}</ItemTitle>
-                  <ItemOrg>{e.org}</ItemOrg>
+                  <ItemOrg>
+                    {e.link ? (
+                      <a href={e.link} target="_blank" rel="noopener noreferrer">
+                        {e.org} ↗
+                      </a>
+                    ) : (
+                      e.org
+                    )}
+                  </ItemOrg>
                   <ItemDesc>{e.desc}</ItemDesc>
+                  {e.link && (
+                    <CertiBadge href={e.link} target="_blank" rel="noopener noreferrer">
+                      Verify Certificate ↗
+                    </CertiBadge>
+                  )}
                 </TimelineItem>
               ))}
             </Timeline>

@@ -5,52 +5,37 @@ import styled, { keyframes } from 'styled-components';
 
 const projects = [
   {
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1200&q=80',
-    title: 'E-Commerce Platform',
-    description: 'Online store with product catalog, cart flow, authentication, and order management built for performance.',
-    tags: ['Next.js', 'Node.js', 'SQLite', 'JWT'],
-    demo: 'https://example.com',
-    code: 'https://github.com/',
+    image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80',
+    title: 'FoodLens — AI Food Intelligence',
+    description: 'Full-stack food intelligence platform analyzing packaged food via barcode scanning, Open Food Facts API, OCR label extraction, and personalized AI food scoring.',
+    tags: ['FastAPI', 'Python', 'React', 'Open Food Facts API', 'OCR', 'Tesseract', 'OpenCV', 'LLM APIs'],
+    demo: 'https://github.com/DeepTandel045',
+    code: 'https://github.com/DeepTandel045',
     features: [
-      'Secure authentication flow using JWT & HttpOnly cookies',
-      'Dynamic product search, filter, and pagination system',
-      'Optimized cart state using Redux Toolkit persisting locally',
-      'Stripe API sandbox checkout integration'
+      'Full-stack food intelligence platform analyzing packaged foods using barcode scanning, Open Food Facts API, and OCR label extraction.',
+      'FastAPI backend with user authentication, profile management, dietary preferences, product analysis, and database integration.',
+      'Nutrition, ingredient, additive, allergen, and personalized food-score analysis empowering informed food choices.',
+      'AI-powered explanations and recommendations while maintaining deterministic numerical food-scoring algorithms.',
+      'Features for product comparison, healthier alternatives, scan history, shopping-basket analysis, and nutrition dashboards.'
     ],
-    challenges: 'Handling race conditions during rapid quantity increments in checkout and designing a clean local SQLite schema to handle transactions without a heavy Postgres server.',
-    architecture: 'Next.js client-side pages fetching RESTful API routes from an Express router connected via Sequelize ORM to a production-optimized SQLite/Postgres backend.'
+    challenges: 'Designing a hybrid food analysis engine combining deterministic numerical scoring algorithms with generative LLM APIs for personalized dietary guidance.',
+    architecture: 'React frontend interacting with a FastAPI REST backend integrated with OpenCV/Tesseract OCR, Open Food Facts API, and PostgreSQL/SQLite database storage.'
   },
   {
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=1200&q=80',
-    title: 'Task Management App',
-    description: 'Kanban board application with team collaboration, drag-and-drop tasks, and progress tracking.',
-    tags: ['React', 'Express', 'MongoDB', 'Socket.io'],
-    demo: 'https://example.com',
-    code: 'https://github.com/',
+    image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=1200&q=80',
+    title: 'SQL Query Developer & Relational DBMS',
+    description: 'Relational database engineering project featuring complex SQL queries, database normalization, schema design, and query performance optimization.',
+    tags: ['MySQL', 'PostgreSQL', 'SQLite', 'DBMS', 'SQL', 'Query Optimization'],
+    demo: 'https://github.com/DeepTandel045',
+    code: 'https://github.com/DeepTandel045',
     features: [
-      'Realtime whiteboard and task state updates via Socket.io channels',
-      'Drag-and-drop board layouts implemented via React DnD',
-      'Granular workspace permissions (Admin, Member, Viewer)',
-      'Automated email reminders for approaching deadline schedules'
+      'Developed complex SQL queries for efficient data retrieval and relational database management.',
+      'Worked with normalized database structures (1NF to 3NF/BCNF) and applied query optimization techniques.',
+      'Gained hands-on experience with schema design, multi-table JOINs, aggregations, window functions, and nested subqueries.',
+      'Executed performance benchmarks, index strategy design, and query execution plan tuning.'
     ],
-    challenges: 'Managing drag-and-drop updates synchronously across multiple sessions without causing layout flickers or database sync delays.',
-    architecture: 'Single Page React Client connected via WebSockets (Socket.io) and Express APIs to a clustered MongoDB Atlas database storage layer.'
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
-    title: 'Analytics Dashboard',
-    description: 'Interactive dashboard for business metrics with chart views, date filtering, and export-ready reports.',
-    tags: ['Next.js', 'Chart.js', 'PostgreSQL', 'REST API'],
-    demo: 'https://example.com',
-    code: 'https://github.com/',
-    features: [
-      'Interactive analytics charts using Chart.js with responsive dimensions',
-      'Raw Excel/PDF dataset export triggers for financial reporting',
-      'Multi-tenant tracking using subdomains and custom filters',
-      'High-speed cache layer built using Redis queries'
-    ],
-    challenges: 'Optimizing heavy SQL database aggregates containing over 1 million records to respond in under 150ms.',
-    architecture: 'Next.js rendering server-side dashboard grids with REST API routers accessing a Redis cache layer and PostgreSQL relational database.'
+    challenges: 'Optimizing execution plans for nested subqueries and multi-level JOIN operations to maximize data retrieval efficiency on normalized schemas.',
+    architecture: 'Relational DBMS (MySQL / PostgreSQL / SQLite) with structured schema design, relational constraints, indexing, and optimized SQL stored routines.'
   },
 ];
 

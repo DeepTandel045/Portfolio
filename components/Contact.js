@@ -348,18 +348,18 @@ export default function Contact() {
                 <p>tandeldeep6106@gmail.com</p>
               </InfoText>
             </InfoItem>
-            <InfoItem href="mailto:tandeldeep6106@gmail.com?subject=Phone%20Inquiry">
+            <InfoItem href="tel:+918128196106">
               <InfoIcon>☎</InfoIcon>
               <InfoText>
                 <p>Phone</p>
-                <p>Available on request</p>
+                <p>+91 8128196106</p>
               </InfoText>
             </InfoItem>
             <InfoItem href="#contact" aria-label="Location">
               <InfoIcon>📍</InfoIcon>
               <InfoText>
                 <p>Location</p>
-                <p>Gujarat, India</p>
+                <p>Valsad, Gujarat, India</p>
               </InfoText>
             </InfoItem>
             <SocialRow>

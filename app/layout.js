@@ -2,9 +2,9 @@ import StyledComponentsRegistry from '@/lib/registry';
 import './globals.css';
 
 export const metadata = {
-  title: 'Deep Tandel | Frontend Developer & Software Engineer',
-  description: 'Portfolio of Deep Tandel - Frontend Developer & Software Engineer building responsive interfaces, web apps, and full-stack products.',
-  keywords: ['Deep Tandel', 'Portfolio', 'Frontend Developer', 'Software Engineer', 'React', 'Next.js', 'Web Developer'],
+  title: 'Deep Tandel | IT Undergraduate & Full-Stack Developer',
+  description: 'Portfolio of Deep Tandel - Information Technology undergraduate at CHARUSAT, creator of FoodLens, with expertise in C++, Python, FastAPI, React, DBMS, OCR, and AI-powered applications.',
+  keywords: ['Deep Tandel', 'FoodLens', 'CHARUSAT', 'IT Undergraduate', 'Full-Stack Developer', 'FastAPI', 'Python', 'React', 'C++', 'DBMS', 'OCR'],
   authors: [{ name: 'Deep Tandel' }],
 };
 
